@@ -1,0 +1,92 @@
+name: insectopedia
+description: On-device pest identification using YOLO26 + RepViT-SAM + ResNet-18.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.13.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  shared_preferences: ^2.2.3
+
+  onnxruntime: ^1.4.1
+  image: ^4.1.7
+  camera: ^0.10.5+7
+  camera_android_camerax: ^0.6.9+2
+  image_picker: ^1.0.7
+  flutter_riverpod: ^2.4.9
+  riverpod: ^2.4.9
+  google_fonts: ^6.1.0
+  share_plus: ^7.2.1
+  path_provider: ^2.1.2
+  path: ^1.9.0
+  sqflite: ^2.3.3+1
+  uuid: ^4.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/models/yolo26.onnx
+
+    - assets/models/repvit_sam_encoder.onnx
+    - assets/models/repvit_sam_encoder.onnx.data
+    - assets/models/repvit_sam_decoder.onnx
+    - assets/models/repvit_sam_decoder.onnx.data
+
+    - assets/models/rn18_tiny_pests.onnx
+    - assets/models/rn18_tiny_pests.onnx.data
+
+    - assets/models/rn18_flea_beetle.onnx
+    - assets/models/rn18_flea_beetle.onnx.data
+
+    - assets/models/rn18_caterpillars.onnx
+    - assets/models/rn18_caterpillars.onnx.data
+
+    - assets/models/rn18_plant_bugs.onnx
+    - assets/models/rn18_plant_bugs.onnx.data
+
+    - assets/models/rn18_soil_larvae.onnx
+    - assets/models/rn18_soil_larvae.onnx.data
+
+    - assets/models/rn18_weevils.onnx
+    - assets/models/rn18_weevils.onnx.data
+
+    - assets/models/rn18_stink_bugs.onnx
+    - assets/models/rn18_stink_bugs.onnx.data
+
+    - assets/models/rn18_blister_beetle.onnx
+    - assets/models/rn18_blister_beetle.onnx.data
+
+    - assets/models/rn18_potato_beetle.onnx
+    - assets/models/rn18_potato_beetle.onnx.data
+
+    - assets/database/growliv.db
+
+    - assets/examples/alfalfa_weevil.jpeg
+    - assets/examples/aphids.webp
+    - assets/examples/army_worm.jpg
+    - assets/examples/black_blister_beetle.jpg
+    - assets/examples/black_cutworm.jpg
+    - assets/examples/brown_marmorated_stink_bug.JPG
+    - assets/examples/colorado_potato_beetle.jpg
+    - assets/examples/corn_borer.png
+    - assets/examples/four_lined_plant_bug.jpg
+    - assets/examples/grape_flea_beetle.webp
+    - assets/examples/green_stink_bug.jpg
+    - assets/examples/grub.jpg
+    - assets/examples/spider_mite.webp
+    - assets/examples/strawberry_root_weevil.jpg
+    - assets/examples/striped_blister_beetle.jpg
+    - assets/examples/striped_cucumber_beetle.jpg
+    - assets/examples/striped_flea_beetle.jpg
+    - assets/examples/tarnished_plant_bug.png
+    - assets/examples/thrips.webp
+    - assets/examples/wireworm.jpg

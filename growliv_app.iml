@@ -1,0 +1,44 @@
+name: growliv
+description: On-device pest identification using YOLO26 + RepViT-SAM + ResNet-18.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.13.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  onnxruntime: ^1.16.0
+  image: ^4.1.7
+  camera: ^0.10.5+9
+  image_picker: ^1.0.7
+  flutter_riverpod: ^2.4.9
+  google_fonts: ^6.1.0
+  fl_chart: ^0.66.2
+  lottie: ^3.0.0
+  share_plus: ^7.2.1
+  path_provider: ^2.1.2
+  path: ^1.9.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/models/yolo26.onnx
+    - assets/models/repvit_sam_encoder.onnx
+    - assets/models/repvit_sam_decoder.onnx
+    - assets/models/rn18_tiny_pests.onnx
+    - assets/models/rn18_flea_beetle.onnx
+    - assets/models/rn18_borers.onnx
+    - assets/models/rn18_caterpillars.onnx
+    - assets/models/rn18_plant_bugs.onnx
+    - assets/models/rn18_soil_larvae.onnx
+    - assets/models/rn18_weevils.onnx
+    - assets/models/rn18_stink_bugs.onnx
+    - assets/models/rn18_blister_beetle.onnx
